@@ -17,27 +17,17 @@ do
     echo $i
 done
 # •	Réalisez le traitement pour la fonction y = x**2 
-for i in {-10..10}
+for i in {-10..10}                  # Loop de -10 a 10
 do
-    echo $((i**2))
+    echo $((i**2))                  # Fais i exposant 2
 done
 
 # •	Réécrivez les programmes avec la structure until  
 # •	Adapter le script afin que les bornes -x, +x soient passées en paramètres au script. 
 
-bf=${1:--10}
-bs=${2:-10}
+bf=${1:--10}                        # Assigne -10 a $1 si aucun parametre n'est passer a $1
+bs=${2:-10}                         # Assigne 10 a $2 si aucun parametre n'est passer a $2
 for((i=bf;i<=bs;i++))
 do
     echo $i
 done
-
-
-# •	Modifiez le script de façon à ce que l'on puisse passer en paramètres l'incrément.
-
-
-
-
-
-
-

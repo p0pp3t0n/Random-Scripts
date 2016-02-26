@@ -6,15 +6,11 @@
 #
 # Exemple : le port 22
 #
-while true
+while true                      # Boucle a l'infini
 do
-    if lsof -t -i:22 >/dev/null 2>&1
+    if lsof -t -i:22 >/dev/null 2>&1 # Verifie si lsof retourne un resultat, si sshd est present il recoie 0 comme resultat sinon 1
     then 
-        kill -9 $(lsof -t -i:22)
+        kill -9 $(lsof -t -i:22)     # Terminate le processus
     fi
     sleep 1
 done &
-    
-
-
-

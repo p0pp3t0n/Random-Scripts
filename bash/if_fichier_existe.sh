@@ -14,20 +14,11 @@ then
 	echo "Usage : $0  nom_fichier"
 	exit 1  # pas de parametre
 fi
-if [ -e "$1" ]
+
+if [ -e "$1" ] # Verifie si le fichier existe (-e)
 then
 	file "$1"
 else
 	echo "$1 n'existe pas"
 	exit 2  # fichier n'existe pas
 fi
-
-
-
-
-
-
-
-
-
-

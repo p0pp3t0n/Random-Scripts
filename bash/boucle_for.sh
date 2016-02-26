@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#
+# Script qui donne 3 examples de structure de for
 for((i=1;i<=10;i++))
 do
 	echo "i = $i"
