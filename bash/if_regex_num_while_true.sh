@@ -9,7 +9,7 @@
 while true                                      # Loop a l'infini
 do
     read -p "Donnez une note : " note           # Demande la note
-    if [[ "$note" =~  ^[fF]in$ ]]               # Verifie si note commence et fini par un chiffre
+    if [[ "$note" =~  ^[fF]in$ ]]               # Verifie si note est = "Fin" pour sortir de script
     then
         break                                   # Sinon break, sort de la boucle while
     fi
