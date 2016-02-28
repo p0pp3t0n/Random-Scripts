@@ -5,15 +5,14 @@
 #             Si pas de parametre , c'est le fichier /etc/passwd
 #             qui est utilise 
 #
-fic=${1:-/etc/passwd}
-if [ -f "$fic" ]
+fic=${1:-/etc/passwd}                           # Si aucun parametre n'est fourni il prend /etc/passwd par defaut
+if [ -f "$fic" ]                                # Verifie si fic est un fichier ordinaire
 then
-    exec < "$fic"
-    while read ligne
+    exec < "$fic"                               # Pas sure...   
+    while read ligne                            # lit la/les lignes du fichier fic
     do
         echo $ligne
     done
 else
     echo "$fic n'est pas un fichier ordinaire"
 fi
-
