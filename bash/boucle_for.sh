@@ -11,6 +11,7 @@ for i in {1..10}
 do
 	echo "i = $i"
 done
+sleep 5
 echo "==================================="
 
 for i in 1 2 3 4 5 6 7 x 9 10    

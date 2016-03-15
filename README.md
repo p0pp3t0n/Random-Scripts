@@ -1,1 +1,1 @@
-# I'm trying stuff`
+# Script being done at school. 
