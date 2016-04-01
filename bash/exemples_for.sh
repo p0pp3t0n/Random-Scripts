@@ -7,13 +7,13 @@ do
     echo $i
 done
 
-suite=(1 3 6 7)
-for i in ${suite[*]}
+suite=(1 3 6 7)       # Defini l'array suite
+for i in ${suite[*]}  # Permet de lire le array
 do
     echo $i
 done
 
-for fic in [ab]*
+for fic in [ab]*      # Tout les fichiers qui commence par a ou b
 do
     if [ -f "$fic" ]  # uniquement ordinaire
     then    
@@ -21,7 +21,7 @@ do
     fi
 done    
 
-for fic in $(ls)
+for fic in $(ls)      # Tout les fichiers dans le dossier local
 do
     if [ ! -f "$fic" ]   # autre que ordinaire
     then    
@@ -37,21 +37,7 @@ done
 
 echo "====================================================="
 IFS=$'\n'
-for ligne in $(cat /etc/passwd)
+for ligne in $(cat /etc/passwd) # Lit le fichier /etc/passwd
 do
     echo $ligne
 done
-
-
-
-
-
-
-
-
-
-
-
-
-
-
