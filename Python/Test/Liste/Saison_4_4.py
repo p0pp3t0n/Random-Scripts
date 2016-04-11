@@ -1,0 +1,10 @@
+hiver=["Decembre", "Janvier", "Fevrier"]
+printemps=["Mars","Avril", "Mai"]
+ete=["Juin", "Juillet", "Aout"]
+automne=["Septembre", "Octobre", "Novembre"]
+saisons=[hiver, printemps, ete, automne]
+
+print saisons[2]
+print saisons[1][0]
+print saisons[1:2]
+print saisons[:][1]
