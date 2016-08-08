@@ -7,9 +7,14 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'xolox/vim-notes'
+Plugin 'xolox/vim-misc'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " End Vundle"
+"
+colorscheme PistachioWarrior
 syntax enable
 set nu
 set background:dark
@@ -37,9 +42,8 @@ map <leader>pp :setlocal paste!<cr>
 " move to beginning/end of line
 nnoremap B ^
 nnoremap E $
-" $/^ doesn't do anything
-nnoremap $ <nop>
-nnoremap ^ <nop>
+" Binding space to open and close folds
+nnoremap <space> za
 " Binding tabs
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabnext<CR>
@@ -54,3 +58,5 @@ function! HasPaste()
     endif
     return ''
 endfunction
+:let g:notes_directories = ['~/School/Cisco', '~/GDrive/Files/']
+
