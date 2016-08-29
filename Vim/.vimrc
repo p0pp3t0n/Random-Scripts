@@ -10,15 +10,16 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-misc'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets' 
 call vundle#end()            " required
 filetype plugin indent on    " required
 " End Vundle"
 "
-colorscheme PistachioWarrior
 syntax enable
 set nu
 set background:dark
-set textwidth=89  " lines longer than 79 columns will be broken
+set textwidth=79  " lines longer than 79 columns will be broken
 set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
 set tabstop=4     " a hard TAB displays as 4 columns
 set expandtab     " insert spaces when hitting TABs
@@ -46,11 +47,13 @@ nnoremap E $
 nnoremap <space> za
 " Binding tabs
 nnoremap th  :tabfirst<CR>
-nnoremap tj  :tabnext<CR>
-nnoremap tk  :tabprev<CR>
+nnoremap tk  :tabnext<CR>
+nnoremap tj  :tabprev<CR>
 nnoremap tl  :tablast<CR>
 nnoremap tn  :tabnew<CR>
 nnoremap tc  :tabclose<CR>
+" binding to execute a Python scrip
+nnoremap tp  :!python %<CR>
 " Returns true if paste mode is enabled
 function! HasPaste()
     if &paste
