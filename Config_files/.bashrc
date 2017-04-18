@@ -33,8 +33,12 @@ colors() {
 
 [[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
 
+
+alias ls='ls --color=auto'
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 set -o vi on
 setxkbmap -option ctrl:nocaps
 alias vi=vim
 PATH=$PATH:~/bin
+export VISUAL=vim
+export EDITOR="$VISUAL"

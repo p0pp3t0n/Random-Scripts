@@ -5,13 +5,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-airline/vim-airline'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-misc'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets' 
+Plugin 'valloric/YouCompleteMe'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " End Vundle"
@@ -36,15 +33,23 @@ set laststatus=2
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l 
 "set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
 
+" Allows vim to copy to clipboard
+" We need vim-comon to be installed
+set clipboard=unnamedplus
+
+
 
 " Binding keyboard keys
 map <leader>q :e ~/buffer<cr>
 map <leader>pp :setlocal paste!<cr>
+
 " move to beginning/end of line
 nnoremap B ^
 nnoremap E $
+
 " Binding space to open and close folds
 nnoremap <space> za
+
 " Binding tabs
 nnoremap th  :tabfirst<CR>
 nnoremap tk  :tabnext<CR>
@@ -52,6 +57,10 @@ nnoremap tj  :tabprev<CR>
 nnoremap tl  :tablast<CR>
 nnoremap tn  :tabnew<CR>
 nnoremap tc  :tabclose<CR>
+
+" Binding NoteToHtml
+nnoremap nh  :NoteToHtml<CR>
+
 " binding to execute a Python scrip
 nnoremap tp  :!python %<CR>
 " Returns true if paste mode is enabled
@@ -61,5 +70,6 @@ function! HasPaste()
     endif
     return ''
 endfunction
-:let g:notes_directories = ['~/School/Cisco', '~/GDrive/Files/']
-
+:let g:notes_directories = ['~/GDrive/j_Files/', '~/GDrive/v_Files']
+:let g:table_mode_corner="|"
+:let g:notes_suffix = '.txt'
